@@ -21,16 +21,19 @@ jabbering-spider development environment.
 
    A dollar sign ($) indicates a terminal prompt, as your user, not root.
 
-1.  First go install Node.js - see the documentation under `node.js`.
+1.  First go install Node.js - see the documentation under `node.rst`.
+
 
 2.  Clone the source::
 
         $ cd ~
         $ git clone git@github.com:ricomoss/jabbering-spider.git
 
+
 3.  Install Meteor::
 
         $ curl https://install.meteor.com | sh
+
 
 4.  Start the runserver::
 
