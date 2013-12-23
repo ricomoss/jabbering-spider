@@ -21,7 +21,7 @@ jabbering-spider development environment.
 
    A dollar sign ($) indicates a terminal prompt, as your user, not root.
 
-1.  First go install Node.js - see the documentation under `node.rst`.
+1.  First go install Node.js - see the documentation under **node.rst**.
 
 
 2.  Clone the source::
