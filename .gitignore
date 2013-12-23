@@ -59,3 +59,5 @@ pylintrc
 .ropeproject/
 local_scripts/
 packages/
+smart.json
+smart.lock

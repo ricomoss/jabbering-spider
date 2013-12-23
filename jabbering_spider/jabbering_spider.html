@@ -1,0 +1,33 @@
+<head>
+    <title>Jabbering Spider</title>
+    <link href="jabbering_spider.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <h1>Digiforge Student Conference 2014</h1>
+    <div class="container">
+        <h2>Presenting: Jabbering Spider
+            <img src="http://www.clker.com/cliparts/f/a/d/4/1265805033951865587spider-th.png" />
+        </h2>
+    </div>
+    <div class="container">
+        {{> twitter_feeds}}
+    </div>
+
+</body>
+
+<template name="twitter_feeds">
+    {{#each feeds}}
+        <ul>
+            {{> twitter_feed}}
+        </ul>
+    {{else}}
+        No tweets yet.
+    {{/each}}
+</template>
+
+<template name="twitter_feed">
+    <li>
+        <img src="{{profile_img}}" /> {{screen_name}} - {{ created_at }} <br> {{feed}}
+    </li>
+</template>
