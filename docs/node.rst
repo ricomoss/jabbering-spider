@@ -4,7 +4,7 @@ Linux Installation (Ubuntu/Debian)
 
 Follow these instructions to install the latest version of Node.js.
 
-1.  Download the latest Node.js binaries for Linus::
+1.  Download the latest Node.js binaries for Linux::
 
     http://www.nodejs.org/download
 
