@@ -58,6 +58,5 @@ blind_tiger/settings/*_local.py
 pylintrc
 .ropeproject/
 local_scripts/
-packages/
 smart.json
 smart.lock
