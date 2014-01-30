@@ -34,8 +34,18 @@ jabbering-spider development environment.
 
         $ curl https://install.meteor.com | sh
 
+4.  Install Meteorite, which gives you access to community packages.::
 
-4.  Start the runserver::
+        $ npm install -g meteorite
+        or
+        $ sudo -H npm install -g meteorite
+        
+
+5.  Install `meteor-twit`::
+
+        $ mrt add twit
+
+6.  Start the runserver::
 
         ~/jabbering-spider/rsb $ meteor
         [[[[[ ~/jabbering-spider/rsb ]]]]]
