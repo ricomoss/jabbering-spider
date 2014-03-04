@@ -36,7 +36,7 @@ if (Meteor.isServer) {
             Twit.get(
                 'search/tweets',
                 {
-                    q: '#nfl since_id:' + twitter_user_id,
+                    q: '#rico_test since_id:' + twitter_user_id,
                     count: 1
                 },
                 boundCallback
@@ -46,35 +46,7 @@ if (Meteor.isServer) {
 }
 
 if (Meteor.isClient) {
-    function PlaySound_add() {
-        PlaySound('added');
-    }
-    function PlaySound_remove() {
-        PlaySound('removed');
-    }
-    function PlaySound(tmp) {
-        console.log(tmp);
-        var SOUND_PATH = 'static/media/';
-        var sound_files = [
-            'ahem.wav', 'bloop.wav', 'boing_spring.wav', 'boing.wav',
-            'bowling.wav', 'burp.wav', 'camera1.wav', 'cheering.wav',
-            'gasp.wav'];
-        var sound_paths = [];
-        sound_files.forEach(function(filename) {
-            sound_paths.push(SOUND_PATH + filename);
-        });
-        var random_index = Math.floor(Math.random() * sound_paths.length);
-        var sound_to_play = sound_paths[random_index];
-        console.log(sound_to_play);
-        var sound = new Audio(sound_to_play);
-        sound.play();
-    }
-
     var query = Feeds.find({});
-    var handle = query.observeChanges({
-        added: PlaySound_add,
-        removed: PlaySound_remove
-    });
 
     Meteor.setInterval(function () {
         Meteor.call('twit_get');
@@ -84,7 +56,7 @@ if (Meteor.isClient) {
             Feeds.remove({_id: feed._id});
             --count;
         }
-    }, 60000);
+    }, 30000);
 
     Template.twitter_feeds.feeds = function () {
         return Feeds.find({}, {sort: {created_at: -1}});
