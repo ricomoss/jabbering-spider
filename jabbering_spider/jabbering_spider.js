@@ -37,7 +37,7 @@ if (Meteor.isServer) {
                 'search/tweets',
                 {
                     q: '#rico_test since_id:' + twitter_user_id,
-                    count: 1
+                    count: 5
                 },
                 boundCallback
             );
